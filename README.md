@@ -1,25 +1,13 @@
-# From Extraction to Wedging: A New Knowledge-enhanced Framework for Recommendation
+# InvG: Invariant Decomposition of Graph for Out-of-Distribution Generalization
 <!--#### -->
 ## Introduction
 
-The combination of data- and knowledge-driven technologies have attracted much attention where present-day recommender system amounts to an exemplary case. 
-Present-day recommender systems utilize side information, i.e., knowledge graph, to  facilitate the recommendation task. 
-Current approaches employ collaborative knowledge graph (CKG) which connects items in a collaborative filtering model with the entities. 
-However, there is no research on how to make full use of such knowledge in recommendation. 
-In this paper, we study the criterion of utilizing knowledge in such models, discover a problem of previous methods, 
-the ''ineffectual representation'' problem, and propose a new framework. 
-First, we analyze the learning process of a knowledge-enhanced recommender model and discover $2$ desired properties for them, 
-locally consistency and having indispensable entities. 
-However, we find that for CKG-based model, the two properties are, in some sense, at odds with each other. 
-This explains why in some cases, GNN may fail to make full use of the knowledge, which we call ''ineffectual representation''. 
-Then, we propose a new framework integrating knowledge into data-driven learning, the knowledge-wedging framework (KWF) for recommendation. 
-In KWF, to avoid ineffectual representation problem, 
-we introduce  knowledge-bridged graph (KBG) which inserts entities as a bridge between users and items. 
-We also introduce the Knowledge Refinement (KR) objective to capture the attributes’ attractiveness to provide reference for recommendation. 
-Our experiments over $4$ real-world datasets demonstrate that KWF addresses the ineffectual representation phenomenon, 
-captures the attributes’ attractiveness, while significantly improving existing models.
+ With accumulating evidence underscoring the susceptibility of Graph Neural Networks (GNN) to distribution shifts, there has been a growing emphasis on the exploration of Graph Invariant learning.
+Current methods in graph invariant learning often assume the existence of subgraphs within the input graph that maintain invariant relationships with labels. However, in numerous real-world scenarios, such invariant relationships cannot be directly discerned from the input graph. In this paper, we introduce a novel method, \textbf{Inv}ariant Decomposition \textbf{G}raph Learning (\textbf{InvG}), designed to achieve out-of-distribution (OOD) generalization on such graphs.
+Inspired by Information Theory, InvG initially decomposes the input graph into a processed graph interconnected by entities representing edge-formulation causal factors. The processed graph contains the invariant pattern and has been proved to effectively mitigate the influence of spurious correlations between the input and labels.
+  Leveraging this processed graph, InvG employs a contrastive-learning based invariant pattern learning approach to assist GNN in capturing the invariant pattern. This innovative design empowers the model to capture the invariant pattern, constituting a valid OOD solution. Experimental results on real-world datasets showcase that InvG significantly enhances performance compared to state-of-the-art baselines.
 
-![image](Images/KWF.png "The structure of Knowledge-wedging Frame work")
+<!-- ![image](Images/KWF.png "The structure of Knowledge-wedging Frame work") -->
 ## Datasets
 
 * [Amazon-book](http://jmcauley.ucsd.edu/data/amazon)
