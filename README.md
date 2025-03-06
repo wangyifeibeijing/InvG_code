@@ -1,12 +1,9 @@
-# InvG: Invariant Decomposition of Graph for Out-of-Distribution Generalization
+# Redefining Entity Integration: Theoretical Insights for Improved Recommender Systems
 <!--#### -->
 ## Introduction
 
- With accumulating evidence underscoring the susceptibility of Graph Neural Networks (GNN) to distribution shifts, there has been a growing emphasis on the exploration of Graph Invariant learning.
-Current methods in graph invariant learning often assume the existence of subgraphs within the input graph that maintain invariant relationships with labels. However, in numerous real-world scenarios, such invariant relationships cannot be directly discerned from the input graph. In this paper, we introduce a novel method, \textbf{Inv}ariant Decomposition \textbf{G}raph Learning (\textbf{InvG}), designed to achieve out-of-distribution (OOD) generalization on such graphs.
-Inspired by Information Theory, InvG initially decomposes the input graph into a processed graph interconnected by entities representing edge-formulation causal factors. The processed graph contains the invariant pattern and has been proved to effectively mitigate the influence of spurious correlations between the input and labels.
-  Leveraging this processed graph, InvG employs a contrastive-learning based invariant pattern learning approach to assist GNN in capturing the invariant pattern. This innovative design empowers the model to capture the invariant pattern, constituting a valid OOD solution. Experimental results on real-world datasets showcase that InvG significantly enhances performance compared to state-of-the-art baselines.
-
+Recommender systems utilize Graph Neural Networks (GNNs) to learn vectorized representations of users and items from user-item interactions for predicting recommendations. Recent methods enhance recommendations by incorporating item-related entities through a technique known as the Collaborative Knowledge Graph (CKG). However, the integration of these entities remains underexplored, leading to unresolved challenges in maintaining structural consistency and effectively utilizing entity information. This paper addresses three key research questions: (1) What properties should GNN-based recommender models satisfy? (2) How well do CKG-based models align with these requirements? (3) Can an alternative graph structure better integrate entities into recommender systems?
+To answer these questions, we define two critical properties for GNN-based recommender models: {\em Local Consistency} and {\em Having Indispensable Entities}. We analyze CKG-based models and identify a fundamental limitation: they fail to simultaneously satisfy both properties. To resolve this issue, we propose a novel graph structure, the Fusion Graph (FG), which introduces additional user-entity connections to enhance entity integration. Our theoretical analysis shows that FG-based models better meet the requirements of recommender systems.
 <!-- ![image](Images/KWF.png "The structure of Knowledge-wedging Frame work") -->
 ## Datasets
 
